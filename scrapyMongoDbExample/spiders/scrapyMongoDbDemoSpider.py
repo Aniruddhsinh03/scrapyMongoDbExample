@@ -47,6 +47,7 @@ class ScrapymongodbdemospiderSpider(Spider):
             'availability': availability,
             'number_of_reviews': number_of_reviews}
 
+
 # extract product information
 def product_info(response, value):
     return response.xpath('//th[text()="' + value + '"]/following-sibling::td/text()').extract_first()
